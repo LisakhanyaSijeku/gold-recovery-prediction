@@ -1,13 +1,9 @@
-# Gold Recovery in Rougher Flotation
+# Predicting gold recovery in rougher flotation
 
-A portfolio adaptation of a chemical engineering project on predicting gold recovery from ore characteristics and controllable flotation settings. This demo generates its own synthetic observations. It contains no plant records, assessment materials, submission files, or original results.
+This notebook contains my original project analysis of how ore characteristics and flotation settings relate to gold recovery. I cleaned the data, used a chronological train/validation/test split, and compared linear regression, K-nearest neighbours, and neural-network models. I evaluated the selected linear regression model on held-out data, used permutation importance to examine the inputs, and explored operating settings with a bounded optimisation.
 
-## Run
-```sh
-python -m pip install -r requirements.txt
-python demo.py
-```
+## Running the notebook locally
 
-The demo screens invalid readings, splits observations chronologically, and fits all preprocessing on training data. It compares linear regression, K-nearest neighbours, and a neural network on validation mean absolute error. The selected model is evaluated on a held-out test period and interpreted with permutation importance.
+Install the dependencies with `python -m pip install -r requirements.txt`, then open `gold_recovery.ipynb` in Jupyter. Running the full notebook requires an authorised local copy of the project dataset at `data/flotation.csv` and a JSON object mapping the feed column names to the scenario values at `data/fixed_feed.json`.
 
-A final screening step fixes a representative synthetic feed and compares the predicted recovery of jointly observed operating settings against typical settings. This is a demonstration of model-based decision support. The synthetic scores, estimated effects, and recommended settings have no plant-operating interpretation.
+The repository contains the analysis source. The dataset, assignment materials, submitted report, specified feed values, and saved notebook outputs are excluded.

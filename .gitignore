@@ -1,5 +1,6 @@
+data/
 *.csv
 *.pdf
-*.ipynb
+.ipynb_checkpoints/
 __pycache__/
 .venv/
